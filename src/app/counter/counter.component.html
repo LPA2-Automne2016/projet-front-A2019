@@ -1,10 +1,10 @@
-<mat-card class="example-card">
+<mat-card class="example-card" *ngIf="value">
     <mat-card-header>
       <mat-card-title>counter {{position}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>
-        {{counterService.initialValue[position]}}
+        {{value.value}}
       </p>
     </mat-card-content>
     <mat-card-actions>
