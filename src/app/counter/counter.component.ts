@@ -12,14 +12,14 @@ export class CounterComponent implements OnInit {
 
   @Input() position: number;
 
-  value: number;
+  value: Counter;
 
   constructor(public counterService: CounterService) { }
 
   ngOnInit() {
     console.log("call counter")
     this.counterService.getCounterValue(this.position)
-          .subscribe(counter => this.value =  counter.value)
+          .subscribe(counter => this.value =  counter)
   }
 
   increment() {
