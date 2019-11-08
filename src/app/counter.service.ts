@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CounterService {
-  public initialValue = [12, 6, 78];
+  public initialValue = [49, 72, 48];
+  public positionCounter = [49, 72, 48];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,7 +22,7 @@ export class CounterService {
   }
 
   getCounterValue(id: number): Observable<Counter> {
-    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+id+".json")
+    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+this.positionCounter[id]+".json")
   }
 
 
