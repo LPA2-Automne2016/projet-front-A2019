@@ -16,6 +16,9 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { ActionCableService } from 'angular2-actioncable';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,7 @@ import { ProfileComponent } from './profile/profile.component';
     MatCardModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ActionCableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
