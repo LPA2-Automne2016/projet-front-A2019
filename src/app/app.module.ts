@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { ActionCableService } from 'angular2-actioncable';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -40,6 +42,7 @@ import { ActionCableService } from 'angular2-actioncable';
     MatListModule,
     MatCardModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [ActionCableService],
   bootstrap: [AppComponent]
