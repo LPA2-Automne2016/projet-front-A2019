@@ -25,6 +25,7 @@
     "@angular/service-worker": "~8.2.11",
     "@auth0/auth0-spa-js": "^1.5.0",
     "angular2-actioncable": "^6.0.2",
+    "http-server": "^0.11.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
