@@ -42,7 +42,7 @@ import { environment } from '../environments/environment';
     MatListModule,
     MatCardModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: true, registrationStrategy: 'registerImmediately' }),
   ],
   providers: [ActionCableService],
   bootstrap: [AppComponent]
