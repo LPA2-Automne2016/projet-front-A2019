@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 exports.handler = async (event, context) => {
     console.log(JSON.stringify(event),JSON.stringify(context) )
 
